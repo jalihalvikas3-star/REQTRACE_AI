@@ -1,0 +1,114 @@
+BEGIN ReqTrace_AI
+
+1.  START application
+2.  INITIALIZE frontend
+3.  INITIALIZE FastAPI backend
+4.  INITIALIZE database connection
+5.  INITIALIZE Neo4j connection
+6.  WAIT for user action
+
+7.  IF user wants to register THEN
+8.      GET user name
+9.      GET user email
+10.     GET user password
+11.     VALIDATE user details
+12.     STORE user information
+13.     RETURN registration status
+14. END IF
+
+15. IF user wants to login THEN
+16.     GET email
+17.     GET password
+18.     VERIFY credentials
+19.     IF credentials are valid THEN
+20.         ALLOW user access
+21.     ELSE
+22.         DISPLAY login error
+23.     END IF
+24. END IF
+
+25. IF user uploads SRS document THEN
+26.     RECEIVE SRS file
+27.     VALIDATE file format
+28.     SAVE uploaded document
+29.     READ PDF document
+30.     EXTRACT text from PDF
+31.     CLEAN extracted text
+32.     IDENTIFY requirement statements
+33.     ASSIGN requirement IDs
+34.     CLASSIFY requirements
+35.     STORE extracted requirements
+
+36.     FOR each requirement
+37.         CREATE requirement object
+38.         STORE requirement ID
+39.         STORE requirement description
+40.         STORE requirement type
+41.     END FOR
+
+42.     GENERATE embeddings for requirements
+43.     CREATE Knowledge Graph
+44.     CREATE requirement nodes
+45.     CREATE component nodes
+46.     IDENTIFY relationships
+47.     CALCULATE relationship similarity
+48.     STORE nodes in Neo4j
+49.     STORE relationships in Neo4j
+50.     RETURN graph information
+
+51. IF user selects SRS comparison THEN
+52.     LOAD SRS Version 1
+53.     LOAD SRS Version 2
+54.     EXTRACT text from Version 1
+55.     EXTRACT text from Version 2
+56.     EXTRACT requirements from Version 1
+57.     EXTRACT requirements from Version 2
+58.     GENERATE embeddings for Version 1
+59.     GENERATE embeddings for Version 2
+
+60.     FOR each requirement in Version 1
+61.         COMPARE with requirements in Version 2
+62.         CALCULATE semantic similarity
+63.         SELECT best matching requirement
+64.         CALCULATE confidence score
+
+65.         IF confidence < 0.75 THEN
+66.             MARK relationship as REJECTED
+67.             STORE rejected relationship
+68.         ELSE IF confidence > 0.85 THEN
+69.             MARK relationship as AUTO_ACCEPTED
+70.             STORE accepted relationship
+71.         ELSE
+72.             MARK relationship as PENDING
+73.             SEND relationship for human review
+74.         END IF
+75.     END FOR
+
+76.     IDENTIFY new requirements
+77.     IDENTIFY deleted requirements
+78.     IDENTIFY modified requirements
+79.     CALCULATE requirement changes
+80.     IDENTIFY affected components
+
+81.     FOR each pending relationship
+82.         DISPLAY Version 1 requirement
+83.         DISPLAY Version 2 requirement
+84.         DISPLAY confidence score
+85.         DISPLAY evidence
+86.         PROVIDE ACCEPT option
+87.         PROVIDE REJECT option
+88.     END FOR
+
+89.     IF user accepts relationship THEN
+90.         UPDATE relationship status to ACCEPTED
+91.         STORE decision in database
+92.     ELSE IF user rejects relationship THEN
+93.         UPDATE relationship status to REJECTED
+94.         STORE decision in database
+95.     END IF
+
+96.     UPDATE relationship statistics
+97.     DISPLAY comparison results
+98.     DISPLAY Knowledge Graph
+99.     DISPLAY impact analysis
+100. END ReqTrace_AI

@@ -1,0 +1,170 @@
+/* =========================================================
+   REQTRACE AI LOGIN
+   ========================================================= */
+
+.login-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 24px 100px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 520px;
+  padding: 48px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.login-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+  opacity: 0.6;
+}
+
+.login-card h2 {
+  margin: 0;
+  font-size: 52px;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: -2px;
+}
+
+.login-description {
+  margin: 18px 0 34px;
+  font-size: 15px;
+  line-height: 1.6;
+  opacity: 0.65;
+}
+
+.login-field {
+  margin-bottom: 22px;
+}
+
+.login-field label {
+  display: block;
+  margin-bottom: 9px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  opacity: 0.65;
+}
+
+.login-field input {
+  width: 100%;
+  height: 52px;
+  padding: 0 16px;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  background: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.login-field input:focus {
+  border-color: #111111;
+}
+
+.login-field input::placeholder {
+  color: #999999;
+}
+
+.login-button {
+  width: 100%;
+  height: 56px;
+  margin-top: 8px;
+  padding: 0 20px;
+  border: none;
+  background: #111111;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  transition: opacity 0.2s ease;
+}
+
+.login-button:hover {
+  opacity: 0.85;
+}
+
+.login-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.login-arrow {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.login-switch {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  font-size: 13px;
+}
+
+.login-switch span {
+  opacity: 0.6;
+}
+
+.login-switch button {
+  border: none;
+  background: transparent;
+  padding: 0;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.login-error {
+  margin: 14px 0;
+  padding: 12px 14px;
+  border: 1px solid #d44;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.login-success {
+  margin: 14px 0;
+  padding: 12px 14px;
+  border: 1px solid #555;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .login-wrapper {
+    padding: 50px 16px 70px;
+  }
+
+  .login-card {
+    padding: 32px 24px;
+  }
+
+  .login-card h2 {
+    font-size: 40px;
+  }
+
+}
